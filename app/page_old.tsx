@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Download, ExternalLink, Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
@@ -10,42 +10,49 @@ export default function Home() {
       title: 'Plateforme de gestion RAM avec chatbot',
       description: 'Plateforme web de gestion des vols, billets et avions avec chatbot intégré pour l\'assistance client',
       tech: ['Django', 'Python', 'AI Chatbot'],
+      link: '#',
       category: 'Web & Mobile'
     },
     {
       title: 'Hospital Management System',
       description: 'Système complet de gestion hospitalière avec gestion des patients, rendez-vous et dossiers médicaux',
       tech: ['.NET', 'C#', 'SQL Server'],
+      link: '#',
       category: 'Web & Mobile'
     },
     {
       title: 'Application Mobile E-Commerce',
       description: 'Application mobile complète de commerce électronique avec panier, paiement et suivi des commandes',
       tech: ['React Native', 'Node.js', 'MySQL'],
+      link: '#',
       category: 'Web & Mobile'
     },
     {
       title: 'Portail Étudiants',
       description: 'Plateforme de gestion académique pour étudiants avec notes, emploi du temps et ressources',
       tech: ['Django', 'MySQL'],
+      link: '#',
       category: 'Web & Mobile'
     },
     {
       title: 'Gestion Employés & Projets & RH',
       description: 'Système de gestion des ressources humaines avec suivi des projets et des employés',
       tech: ['Django', 'Neo4J'],
+      link: '#',
       category: 'Web & Mobile'
     },
     {
       title: 'Gestion Coupe du Monde 2030',
       description: 'Application de gestion des matchs, équipes et statistiques pour la Coupe du Monde',
       tech: ['JavaFX', 'MySQL'],
+      link: '#',
       category: 'Desktop & Conception'
     },
     {
       title: 'Plateforme de gestion d\'événements',
       description: 'Système de planification et gestion d\'événements avec réservations et notifications',
       tech: ['JavaScript', 'MySQL'],
+      link: '#',
       category: 'Desktop & Conception'
     }
   ];
@@ -60,7 +67,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-blue-950 to-slate-950">
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-blue-900/20 bg-slate-950/80">
+      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-blue-900/20">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-white font-bold text-xl">ELKHAL Abdessamad</h1>
           <div className="flex gap-6">
@@ -151,70 +158,68 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* About Section - White Background */}
-      <section id="about" className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-3xl font-bold text-slate-900 mb-6">À propos de moi</h3>
-            <p className="text-slate-700 text-lg mb-6 leading-relaxed">
-              Développeur Full Stack passionné avec une solide expérience en développement web et mobile. 
-              J'ai réalisé plusieurs projets académiques et professionnels utilisant des technologies modernes 
-              comme Django, React Native, .NET, et Node.js. Mon parcours inclut des stages chez Royal Air Maroc 
-              et Multicérame, où j'ai développé des compétences en gestion de données, développement de chatbots, 
-              et gestion de systèmes informatiques.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-6">
-                <h4 className="text-xl font-bold text-slate-900 mb-4">Expériences</h4>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-blue-600 font-semibold">Stage d'Initiation – Royal Air Maroc</p>
-                    <p className="text-slate-600 text-sm">Juillet 2025 | Nouacer, Maroc</p>
-                    <ul className="text-slate-700 text-sm mt-2 list-disc list-inside">
-                      <li>Suivi des opérations informatisées et gestion des données</li>
-                      <li>Conception d'une plateforme web de gestion des vols avec chatbot</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-blue-600 font-semibold">Stage d'Observation – Multicérame</p>
-                    <p className="text-slate-600 text-sm">Juillet 2023 | Berrechid, Maroc</p>
-                    <ul className="text-slate-700 text-sm mt-2 list-disc list-inside">
-                      <li>Observation des processus opérationnels</li>
-                      <li>Suivi de la gestion des commandes, stocks et produits</li>
-                    </ul>
-                  </div>
+      {/* About Section */}
+      <section id="about" className="max-w-6xl mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-3xl font-bold text-white mb-6">À propos de moi</h3>
+          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            Développeur Full Stack passionné avec une solide expérience en développement web et mobile. 
+            J'ai réalisé plusieurs projets académiques et professionnels utilisant des technologies modernes 
+            comme Django, React Native, .NET, et Node.js. Mon parcours inclut des stages chez Royal Air Maroc 
+            et Multicérame, où j'ai développé des compétences en gestion de données, développement de chatbots, 
+            et gestion de systèmes informatiques.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-blue-950/40 border border-blue-900/30 rounded-lg p-6">
+              <h4 className="text-xl font-bold text-white mb-4">Expériences</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-blue-300 font-semibold">Stage d'Initiation – Royal Air Maroc</p>
+                  <p className="text-gray-400 text-sm">Juillet 2025 | Nouacer, Maroc</p>
+                  <ul className="text-gray-300 text-sm mt-2 list-disc list-inside">
+                    <li>Suivi des opérations informatisées et gestion des données</li>
+                    <li>Conception d'une plateforme web de gestion des vols avec chatbot</li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-6">
-                <h4 className="text-xl font-bold text-slate-900 mb-4">Certifications</h4>
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-blue-600 font-semibold">Introduction to Front-End Development</p>
-                    <p className="text-slate-600 text-sm">Meta - 2026</p>
-                  </div>
-                  <div>
-                    <p className="text-blue-600 font-semibold">IBM Professional Back-End Certification</p>
-                    <p className="text-slate-600 text-sm">IBM - 2026</p>
-                  </div>
-                  <div>
-                    <p className="text-blue-600 font-semibold">React Native Mobile</p>
-                    <p className="text-slate-600 text-sm">Meta - 2025</p>
-                  </div>
-                  <div>
-                    <p className="text-blue-600 font-semibold">Programming with Python</p>
-                    <p className="text-slate-600 text-sm">University of Michigan - 2024</p>
-                  </div>
+                <div>
+                  <p className="text-blue-300 font-semibold">Stage d'Observation – Multicérame</p>
+                  <p className="text-gray-400 text-sm">Juillet 2023 | Berrechid, Maroc</p>
+                  <ul className="text-gray-300 text-sm mt-2 list-disc list-inside">
+                    <li>Observation des processus opérationnels</li>
+                    <li>Suivi de la gestion des commandes, stocks et produits</li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
+
+            <div className="bg-blue-950/40 border border-blue-900/30 rounded-lg p-6">
+              <h4 className="text-xl font-bold text-white mb-4">Certifications</h4>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-blue-300 font-semibold">Introduction to Front-End Development</p>
+                  <p className="text-gray-400 text-sm">Meta - 2026</p>
+                </div>
+                <div>
+                  <p className="text-blue-300 font-semibold">IBM Professional Back-End Certification</p>
+                  <p className="text-gray-400 text-sm">IBM - 2026</p>
+                </div>
+                <div>
+                  <p className="text-blue-300 font-semibold">React Native Mobile</p>
+                  <p className="text-gray-400 text-sm">Meta - 2025</p>
+                </div>
+                <div>
+                  <p className="text-blue-300 font-semibold">Programming with Python</p>
+                  <p className="text-gray-400 text-sm">University of Michigan - 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Skills Section */}
@@ -243,52 +248,33 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h3 className="text-3xl font-bold text-slate-900 mb-12">Projets Académiques</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="group relative bg-slate-50 border border-slate-200 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-lg transition"
-              >
-                <div className="mb-4">
-                  <span className="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
-                    {project.category}
-                  </span>
-                </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h4>
-                <p className="text-slate-700 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="text-xs bg-slate-200 text-slate-700 px-3 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <a
-              href="https://github.com/ELKHALAbdessamad?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition font-semibold"
+      <section id="projects" className="max-w-6xl mx-auto px-4 py-20">
+        <h3 className="text-3xl font-bold text-white mb-12">Projets Académiques</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="group relative bg-gradient-to-br from-blue-950/40 to-slate-950 border border-blue-900/30 rounded-xl p-6 hover:border-blue-500/50 transition"
             >
-              <Github size={20} />
-              Voir tous mes projets sur GitHub
-            </a>
-          </motion.div>
+              <div className="mb-4">
+                <span className="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">
+                  {project.category}
+                </span>
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+              <p className="text-gray-300 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech) => (
+                  <span key={tech} className="text-xs bg-blue-900/30 text-blue-300 px-3 py-1 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
