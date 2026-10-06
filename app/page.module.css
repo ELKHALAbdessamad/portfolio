@@ -1,0 +1,4 @@
+/* Force Tailwind compilation */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
